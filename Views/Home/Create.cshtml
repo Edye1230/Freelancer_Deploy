@@ -1,0 +1,78 @@
+﻿
+
+<div class="container bootstrap snippets bootdeys col-sm-5 justify-content-center" style="margin:200px;">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-default invoice" id="invoice">
+				<div class="panel-body">
+					<div class="row">
+
+						<div class="col-xs-4 pull-left" style="margin:20px; border-radius:10px">
+							<img src="@ViewData["logo"]" alt="" width="200">
+						</div>
+
+
+						<div class="col-xs-4" style="margin-left: 50px;">
+							<h3>@ViewData["title"]</h3>
+						</div>
+
+					</div>
+					<hr>
+					<div class="row">
+
+						<div class="col-xs-4 from">
+							<p class="lead marginbottom">De : @ViewData["name"]</p>
+							<p>Domicilio: @ViewData["address"]</p>
+							<p>Tipo de documento: @ViewData["docType"]</p>
+							<p>N° de documento: @ViewData["docNumber"]</p>
+						</div>
+
+						<div class="col-xs-4 to">
+							<p class="lead marginbottom">Para : Nombre de Cliente</p>
+							<p>@ViewData["Cliente_Address"]</p>
+							<p>Email: cliente@email.com</p>
+
+						</div>
+
+						<div class="col-xs-4 text-right payment-details">
+							<p class="lead marginbottom payment-info">Detalles de Pago</p>
+							<p>Fecha: 19/01/2023</p>
+						</div>
+
+					</div>
+
+					<div class="row table-row">
+						<table class="table table-striped">
+							<thead>
+								<tr class="bg-primary">
+									<th class="text-center" style="width:5%">#</th>
+									<th style="width:50%">Descripción</th>
+									<th class="text-right" style="width:15%">Precio Unitario</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">1</td>
+									<td>@ViewData["description"]</td>
+									<td class="text-right">@ViewData["currency"] @ViewData["ammount"]</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+
+					<div class="row">
+						<div class="col-xs-6 margintop">
+						</div>
+						<div class="col-xs-6 text-right pull-right invoice-total">
+
+							<p>Total : @ViewData["ammount"] </p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
